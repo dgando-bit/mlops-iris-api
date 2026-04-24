@@ -1,17 +1,24 @@
 # mlops-iris-api
 # organiserons projet
 mlops-iris-api/
-├── deployments/           # Les services concernant le déploiements, que nous verrons plus tard.
+├── deployments/
 │   ├── nginx/
+│   │   ├── certs
+│   │   │     ├── nginx.crt
+│   │   │     └── nginx.key
+│   │   ├── .htpasswd
 │   │   ├── Dockerfile
 │   │   └── nginx.conf
+│   ├── Prometheus/
+│   │   └── prometheus.yml
 ├── models/
-│   ├── model.joblib       # Le modèle entraîné  
+│   ├── model.joblib
 ├── src/
 │   ├── api/
-│   │   ├── Dockerfile     # Le Dockerfile pour construire notre image
-│   │   ├── main.py        # Le code de notre API
+│   │   ├── Dockerfile
+│   │   ├── main.py
 │   │   └── requirements.txt
-|── docker-compose.yml
+├── docker-compose.yml
 ├── Makefile
-└── README.md
+├── README.md
+└── request.json
